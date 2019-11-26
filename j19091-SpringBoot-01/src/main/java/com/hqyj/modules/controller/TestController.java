@@ -15,7 +15,7 @@ public class TestController {
 
 	@RequestMapping(value = "/login.do")
 	public String login() {
-		return "this is a Spring boot App.";
+		return "this is a Spring boot App";
 
 	}
 
