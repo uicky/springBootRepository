@@ -52,7 +52,7 @@ public class TestController {
 		LOGGER.info("this is a info logger");
 		LOGGER.warn("this is a warn logger");
 		LOGGER.error("this is a error logger");
-		return "this is a testLogger";
+		return "this is a testLogger ";
 	}
 
 }
