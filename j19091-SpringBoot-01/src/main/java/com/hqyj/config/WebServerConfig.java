@@ -57,7 +57,6 @@ public class WebServerConfig {
 		};
 		factory.addAdditionalTomcatConnectors(connector());
 		return factory;
-
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.hqyj.modules.entity;
+package com.hqyj.modules.system.entity;
 
 import java.util.Date;
 import java.util.List;
