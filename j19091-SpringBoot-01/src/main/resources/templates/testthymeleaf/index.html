@@ -1,3 +1,37 @@
 <section>
-	This is test page.
+	<div  align="center">
+		<h3>file upload and downlod</h3>
+		<a href="/testthymeleaf/dowloadFile?fileName=IMG20150919162800.jpg">downloadfile</a>
+			
+		<p th:text="${message}"></p>
+		<p>上传文件，使用multipart/form‐data类型</p>
+		<form action="/testthymeleaf/uploadFile" method="post" enctype="multipart/form-data">
+			<input type="file" name="file">
+			<button type="submit">上传</button>
+		</form>
+	</div>
+	<div style="height:30px"></div>
+	
+	<div  align="center">
+			<p th:text="${message}"></p>
+		<form action="/testthymeleaf/uploadFiles" method="post" enctype="multipart/form-data">
+ <table border="2px">
+			 <tr>
+			 	<td>
+			 		<input type="file" name="files">
+			 	</td>
+			 </tr>
+			<tr>
+			 	<td>
+					<input type="file" name="files">
+			 	</td>
+			 </tr>
+			 <tr>
+			 	<td>
+					<button type="submit">上传</button>
+				</td>
+			 </tr>
+		</table>
+		</form>
+	</div>
 </section>

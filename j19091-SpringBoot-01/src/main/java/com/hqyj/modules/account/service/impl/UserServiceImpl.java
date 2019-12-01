@@ -13,7 +13,6 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
 	/**
-	 * 
 	* <p>Title: queryUserByUserId</p>
 	* <p>Description: 通过用户id查询用户对象</p>
 	* @param userId

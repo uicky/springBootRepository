@@ -10,6 +10,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+  /**
+ 	* 
+	* <p>Title: UriInterceptro</p>  
+	* <p>Description:拦截器</p>  
+	* @author zhaopeng
+	* @date 2019年11月29日
+	*/
 @Component
 public class UriInterceptro implements HandlerInterceptor {
 	private static final Logger LOGGER = LoggerFactory.getLogger(UriInterceptro.class);
@@ -38,7 +45,7 @@ public class UriInterceptro implements HandlerInterceptor {
 			if (uri.startsWith("/")) {
 				uri = uri.substring(1);
 			}
-			LOGGER.debug("uri:"+uri);
+			LOGGER.debug("uri:"+uri);//测试uri是否取到
 			modelAndView.getModelMap().addAttribute("template", uri.toLowerCase());
 		}
 
