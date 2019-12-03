@@ -4,7 +4,7 @@
       xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">  
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<TITLE>SpringDemo</TITLE>
+		<TITLE>欢迎登录</TITLE>
 		<META name="description" content="THORNBIRD.COM"/>
 		
 		<!-- 引入外部js或css -->
@@ -16,10 +16,10 @@
 		<link th:href="${'/css/demo.css'}" rel="stylesheet" />
 	</head>
 	
-	<body>
+	<body style="background: url(../../image/login_bgx.gif);">
 		<div id="wrapper">
 			<!--header-->
-			<div th:replace="fragments/header :: header"></div>
+			<!-- <div th:replace="fragments/header :: header"></div> -->
 			
 			<!-- body -->
 			<div class='mainBody'>
@@ -29,7 +29,7 @@
 			</div>
 			
 			<!--footer-->
-			<div th:replace="fragments/footer :: footer"></div>
+			<!-- <div th:replace="fragments/footer :: footer"></div> -->
 		</div>
 	</body>
 </html>

@@ -1,17 +1,19 @@
 package com.hqyj.modules.account.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
- * 
 * <p>Title: Resource</p>  
 * <p>Description: </p>  
 * @author zhaopeng
-* @date 2019年11月28日
+* @date 2019年12月3日
  */
 @Entity
 @Table(name = "m_resource")
@@ -22,6 +24,9 @@ public class Resource {
 	private String resourceUri;
 	private String resourceName;
 	private String permission;
+
+	@Transient
+	private List<Role> roles;
 
 	public int getResourceId() {
 		return resourceId;
@@ -58,18 +63,27 @@ public class Resource {
 	@Override
 	public String toString() {
 		return "Resource [resourceId=" + resourceId + ", resourceUri=" + resourceUri + ", resourceName=" + resourceName
-				+ ", permission=" + permission + "]";
+				+ ", permission=" + permission + ", roles=" + roles + "]";
 	}
 
-	public Resource(int resourceId, String resourceUri, String resourceName, String permission) {
+	public Resource(int resourceId, String resourceUri, String resourceName, String permission, List<Role> roles) {
 		super();
 		this.resourceId = resourceId;
 		this.resourceUri = resourceUri;
 		this.resourceName = resourceName;
 		this.permission = permission;
+		this.roles = roles;
 	}
 
 	public Resource() {
+	}
+
+	public List<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
 	}
 
 }

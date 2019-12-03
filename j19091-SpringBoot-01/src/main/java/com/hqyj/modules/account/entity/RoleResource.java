@@ -18,24 +18,16 @@ import javax.persistence.Table;
 public class RoleResource {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userRoleId;
-	private int userId;
+	private int roleResourceId;
 	private int roleId;
+	private int resourceId;
 
-	public int getUserRoleId() {
-		return userRoleId;
+	public int getRoleResourceId() {
+		return roleResourceId;
 	}
 
-	public void setUserRoleId(int userRoleId) {
-		this.userRoleId = userRoleId;
-	}
-
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setRoleResourceId(int roleResourceId) {
+		this.roleResourceId = roleResourceId;
 	}
 
 	public int getRoleId() {
@@ -46,19 +38,31 @@ public class RoleResource {
 		this.roleId = roleId;
 	}
 
-	@Override
-	public String toString() {
-		return "RoleResource [userRoleId=" + userRoleId + ", userId=" + userId + ", roleId=" + roleId + "]";
+	public int getResourceId() {
+		return resourceId;
 	}
 
-	public RoleResource(int userRoleId, int userId, int roleId) {
+	public void setResourceId(int resourceId) {
+		this.resourceId = resourceId;
+	}
+
+	public RoleResource(int roleResourceId, int roleId, int resourceId) {
 		super();
-		this.userRoleId = userRoleId;
-		this.userId = userId;
+		this.roleResourceId = roleResourceId;
 		this.roleId = roleId;
+		this.resourceId = resourceId;
 	}
 
 	public RoleResource() {
 	}
+
+	@Override
+	public String toString() {
+		return "RoleResource [roleResourceId=" + roleResourceId + ", roleId=" + roleId + ", resourceId=" + resourceId
+				+ "]";
+	}
+	
+
+	
 
 }

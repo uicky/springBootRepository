@@ -1,4 +1,4 @@
-package com.hqyj.config;
+package com.hqyj.config.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
